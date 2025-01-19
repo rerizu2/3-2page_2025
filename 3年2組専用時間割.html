@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3年2組専用ページ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        select {
+            padding: 5px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        a {
+            text-decoration: none;
+            color: #2196f3;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+
+        /* ナビゲーションメニュー */
+nav {
+    background-color: #f44336;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+        .rounded-image {
+      width: 300px; /* 任意の幅 */
+      height: auto; /* アスペクト比を維持 */
+      border-radius: 15px; /* 丸みの半径 */
+    }
+    </style>
+</head>
+<body>
+    <nav>
+  <ul>
+    <li><a href="3年2組ホームページ.html">3年2組ホーム</a></li>
+    <li><a href="3年2組専用時間割.html">3年2組専用時間割</a></li>
+    <li><a href="3年2組動画＆画像.html">3年2組動画＆画像</a></li>
+  </ul>
+</nav>
+    <header>
+        <h1>3年2組専用時間割ページ</h1>
+        <p>こちらは3年2組専用のページです。</p>
+    </header>
+    <main>
+        <section>
+            <h2>時間割</h2>
+            <body>
+    <label for="imageSelector">曜日を選択してください:</label>
+    <select id="imageSelector" onchange="displayImage()">
+        <option value=""> </option>
+        <option value="月曜日.png">月曜日</option>
+        <option value="火曜日.png">火曜日</option>
+        <option value="水曜日.png">水曜日</option>
+        <option value="木曜日.png">木曜日</option>
+        <option value="金曜日.png">金曜日</option>
+    </select>
+
+    <img id="imageDisplay" src="" alt="選択された画像" style="display:none;">
+</body>
+            <script>
+                function displayImage() {
+            const selectElement = document.getElementById('imageSelector');
+            const selectedValue = selectElement.value;
+            const imageElement = document.getElementById('imageDisplay');
+
+            if (selectedValue) {
+                imageElement.src = selectedValue;
+                imageElement.style.display = 'block';
+            } else {
+                imageElement.style.display = 'none';
+            }
+        }
+            </script>
+        </section>
+        <h1>3年2組　クラスルーム</h1>
+        <a href="https://classroom.google.com/c/NjYwNzY0MTIzOTcx">
+            <img src="3年2組クラスルーム.png" alt="3年2組のクラスルーム" class="rounded-image">
+        </a>
+        <h1>時間割_2024　クラスルーム</h1>
+        <a href="https://classroom.google.com/c/NjY5OTkxODIwNzA1">
+            <img src="時間割_2024クラスルーム.png" alt="時間割_2024のクラスルーム" class="rounded-image">
+        </a>
+    </main>
+    <footer style="text-align: center; padding: 20px; background: #333; color: white;">
+        &copy; 2025 3年2組ページ
+    </footer>
+</body>
+</html>
