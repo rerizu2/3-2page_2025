@@ -101,7 +101,12 @@ nav ul li a:hover {
     <main>
         <section>
             <h2>時間割</h2>
-            
+            <button onclick="document.getElementById('modal').showModal();">時間割変更</button>
+        <dialog id="modal">
+            <h1>時間割変更</h1>
+　　　　　　　　<p>2月4日火曜日　4限 美術→理科に変更</p>
+            <button onclick="document.getElementById('modal').close();">閉じる</button>
+        </dialog>
             <label for="imageSelector">曜日を選択してください:</label>
             <select id="imageSelector" onchange="displayImages()">
                 <option value=""> </option>
